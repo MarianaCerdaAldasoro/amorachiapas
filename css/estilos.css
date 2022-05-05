@@ -1,0 +1,401 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid__container{
+    display: grid
+
+    border: 5px solid white
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.header {
+    display: flex;
+}
+
+h1 {
+    margin: 10px;
+    width: 1300px;
+    height: 110px;
+    color: antiquewhite; 
+    font-size: 70px;
+    font-style: oblique;
+    text-align: center;
+    text-shadow: 5px 5px black;
+    background-image: url(../recursos/imagen1.jfif);
+    position: absolute;
+    right: 0;
+    top: 30px;
+    padding-top: 30px;
+}
+
+.header__navegacion {
+    position: relative;
+    background-color: rgb(4, 9, 11);
+    margin: 20px;
+    width: 100%;
+}
+
+.header__logo {
+    width: 180px;
+}
+
+.header__lista {
+    list-style-type:none ;
+    float: right;
+}
+
+.header__item {
+    display: inline;
+    margin: 10px;
+    padding: 5px;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido__video{
+    margin: 40px;
+}
+
+.blog {
+    float: right;
+    background-color: grey;
+    width: 800px;
+    height: 100%;
+    text-align: justify;
+    padding: 20px;
+}
+
+.blog__tittle{
+    text-align: center;
+    margin: 20px;
+    color: rgb(217, 222, 220);
+    background-color: blueviolet;
+}
+
+.blog__texto {
+    display: inline;
+    color: azure;
+}
+
+footer {
+    color: azure;
+    text-align: center;
+}
+
+.cultura {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.cultura__imagen {
+    width: 1000px;
+
+}
+
+.cultura__texto {
+    background-color: darkorchid;
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+}
+
+.tradiciones {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.chiapas__subtitulo {
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
+
+.tradiciones__imagen {
+    text-align:center;
+    top: 40px;
+    background-image: url(../recursos/costumbres_fiestas_chiapas_mf.jpg);
+    color: crimson;
+    font-size: 70px;
+    font-style: italic;
+    text-decoration-line: inherit;
+    text-shadow: 5px 5px black;
+    width: 90%;
+    margin: 0;
+    padding-top: 330px;
+}
+
+.tradiciones__texto {
+    text-align: justify;
+    padding: 10px;
+    background-color: crimson;
+    color: blanchedalmond;
+    width: 30%;
+}
+
+.tradiciones__extra{
+display: flex;
+justify-content: center;
+}
+
+.tradiciones__semana {
+    text-align: justify;
+    padding: 10px;
+    background-color: crimson;
+    color: blanchedalmond;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.tradiciones__virgen {
+    text-align: justify;
+    padding: 10px;
+    background-color: crimson;
+    color: blanchedalmond;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.tradiciones__sancristobal {
+    text-align: justify;
+    padding: 10px;
+    background-color: crimson;
+    color: blanchedalmond;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.artesanias {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.artesanias__imagen {
+    text-align:center;
+    top: 40px;
+    background-image: url(../recursos/artesanias.jpg);
+    background-repeat: no-repeat;
+    color: blue;
+    font-size: 70px;
+    width: 100%;
+    font-style: italic;
+    text-decoration-line: inherit;
+    text-shadow: 5px 5px black;
+    margin: 0;
+    padding-top: 330px;
+    background-size: contain;
+}
+
+.artesanias__texto{
+    text-align: justify;
+    padding: 10px;
+    background-color: blue;
+    color: blanchedalmond;
+    border-radius: 5px;
+}
+
+.musica {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px 10px 10px;
+}
+
+.musica__imagen{
+    text-align:center;
+    top: 40px;
+    background-image: url(../recursos/musica_chiapas.webp);
+    background-repeat: no-repeat;
+    color: rgb(80, 163, 20);
+    font-size: 70px;
+    font-style: italic;
+    text-shadow: 5px 5px black;
+    width: 100%;
+    margin: 0;
+    padding-top: 300px;
+    background-size: contain;
+}
+.musica__contenido {
+    text-align: justify;
+    padding: 10px;
+    background-color: rgb(80, 163, 20);
+    color: blanchedalmond;
+    width: 1000px;
+    height: 487px;
+    background-size: contain;
+    margin: 0;
+
+}
+
+.musica__video {
+    width: 40%;
+    align-items: center;
+}
+
+.gastronomia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.gastronomia__imagen {
+    width: 1000px;
+
+}
+
+.gastronomia__texto {
+    background-color: rgb(240, 25, 32);
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+    height: 100%;
+}
+
+.gastronomia__comidas {
+display: flex;
+align-items:flex-start;
+justify-content: center;
+}
+
+.gastronomia__platillos {
+    display: flex table-column;
+    margin: 20px 10px 10px 10px;
+}
+
+.platillos__imagen {
+    width: 450px;
+    border-radius: 5px;
+
+}
+
+.platillos__texto {
+    background-color: rgb(240, 25, 32);
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+    width: 425px;
+    border-radius: 5px;
+}
+
+.naturaleza {
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    margin: 10px;
+}
+
+.naturaleza__paisaje {
+    display: flex;
+    align-items:flex-start;
+    }
+
+.paisaje__imagen {
+    width: 600px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.paisaje__texto {
+    background-color: rgb(37, 95, 209);
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+    width: 580px;
+    border-radius: 5px;
+}
+
+.naturaleza__animales {
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    }
+
+.animales__imagen {
+    width: 225px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.animales__texto {
+    background-color: rgb(37, 95, 209);
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.naturaleza__plantas {
+    display:flex
+}
+
+.plantas__imagen {
+    width: 1500px;
+    border-radius: 10px;
+    margin: 10px;
+}  
+    
+.plantas__texto {
+    display: inline-block;
+    background-color: rgb(37, 95, 209);
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.contacto {
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.contacto__mapa {
+    margin: 20px;
+}
+
+.contacto__contenido {
+    flex-direction: row;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.contacto__informacion {
+    background-color: blueviolet;
+    padding: 10px;
+    color: azure;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.redes__sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redes__imagen {
+    width: 30px;
+}
