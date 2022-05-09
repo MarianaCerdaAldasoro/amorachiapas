@@ -1,6 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
+iframe {
+    width: 100%;
+    height: 24rem;
 }
 
 .index-layout {
@@ -71,12 +71,16 @@ h1 {
 
 .header__lista {
     list-style-type:none;
+    display: flex;
 }
 
 .header__item {
-    display: inline;
     margin: 10px;
     padding: 5px;
+}
+
+.imagen-principal {
+    max-width: 100%;
 }
 
 .contenido {
@@ -86,13 +90,13 @@ h1 {
 }
 
 .contenido__video{
+    max-width: 100%;
     margin: 40px;
 }
 
 .blog {
     float: right;
     background-color: grey;
-    width: 800px;
     height: 100%;
     text-align: justify;
     padding: 20px;
@@ -123,7 +127,7 @@ footer {
 }
 
 .cultura__imagen {
-    width: 1000px;
+    max-width: 60%;
 
 }
 
@@ -149,6 +153,8 @@ footer {
     text-align:center;
     top: 40px;
     background-image: url(../recursos/costumbres_fiestas_chiapas_mf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: crimson;
     font-size: 70px;
     font-style: italic;
@@ -210,6 +216,7 @@ justify-content: center;
     top: 40px;
     background-image: url(../recursos/artesanias.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     color: blue;
     font-size: 70px;
     width: 100%;
@@ -255,7 +262,6 @@ justify-content: center;
     background-color: rgb(80, 163, 20);
     color: blanchedalmond;
     width: 1000px;
-    height: 487px;
     background-size: contain;
     margin: 0;
 
@@ -264,6 +270,7 @@ justify-content: center;
 .musica__video {
     width: 40%;
     align-items: center;
+    height: 100%;
 }
 
 .gastronomia {
@@ -274,7 +281,7 @@ justify-content: center;
 }
 
 .gastronomia__imagen {
-    width: 1000px;
+    max-width: 60%;
 
 }
 
@@ -411,9 +418,246 @@ column-gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .redes__imagen {
-    width: 30px;
+    width: 1.875rem;
+    padding: .625rem;
+}
+
+@media (min-width:320px) and (max-width: 540px) 
+{
+
+    body {
+        margin: 1rem;
+    }
+
+    .header {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .header__navegacion {
+        align-items: center;
+    }
+
+    .header__lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header__logo {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    .contenido {
+        flex-direction:column-reverse;
+    }
+
+    .cultura {
+        flex-direction: column;
+    }
+
+    .cultura__imagen {
+        max-width: 100%;
+    }
+
+    .tradiciones {
+        flex-direction: column;
+    }
+
+    .tradiciones__texto {
+        width: 100%;
+        margin: 0;
+    }
+
+    .tradiciones__imagen {
+        display:flex;
+        width: 100%;
+        font-size: 2rem;
+        top: 50%;
+        padding-top: 0;
+        height: 10rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tradiciones__extra {
+        flex-direction: column;
+    }
+
+    .artesanias {
+        flex-direction: column;
+    }
+
+    .artesanias__imagen{
+        display:flex;
+        width: 100%;
+        font-size: 2rem;
+        top: 50%;
+        padding-top: 0;
+        height: 10rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .musica {
+        flex-direction:column;
+    }
+
+    .musica__imagen {
+        display:flex;
+        width: 100%;
+        font-size: 2rem;
+        top: 50%;
+        padding-top: 0;
+        height: 15rem;
+        background-position: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .musica__contenido {
+        width: auto;
+    }
+
+    .gastronomia {
+        flex-direction:column;  
+    }
+
+    .gastronomia__imagen1 {
+        max-width: 100%;
+    }
+
+    .gastronomia__comidas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .naturaleza {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .naturaleza__plantas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+}
+
+
+
+@media (min-width:541px) and (max-width: 1000px) 
+{
+    h1 {
+        font-size: 3rem;
+    }
+
+    .contenido {
+        flex-direction:column-reverse;
+    }
+
+    .cultura {
+        flex-direction: column;
+    }
+
+    .cultura__imagen {
+        max-width: 100%;
+    }
+    
+    .tradiciones {
+        flex-direction: column;
+    }
+
+    .tradiciones__texto {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .tradiciones__imagen {
+        display:flex;
+        width: 100%;
+        font-size: 4rem;
+        top: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .artesanias {
+        flex-direction: column;
+    }
+
+    .artesanias__imagen{
+        display:flex;
+        width: 100%;
+        font-size: 4rem;
+        top: 50%;
+        padding-top: 0;
+        height: 10rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .musica {
+        flex-direction:column;
+    }
+
+    .musica__imagen {
+        display:flex;
+        width: auto;
+        background-position: bottom;
+        font-size: 4rem;
+        top: 50%;
+        padding-top: 0;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .musica__contenido {
+        width: 92vw;
+        height: 100%;
+    }
+
+    .musica__video {
+        max-width: 100%;
+    }
+
+    .gastronomia {
+        flex-direction:column;  
+    }
+
+    .gastronomia__imagen1 {
+        width:100%;
+    }
+
+    .gastronomia__comidas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .naturaleza {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .naturaleza__plantas {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
 }
