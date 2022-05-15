@@ -74,10 +74,17 @@ h1 {
     display: flex;
 }
 
+.header__item:hover {
+    transform: scale(1.25);
+}
+
 .header__item {
     margin: 10px;
     padding: 5px;
+    transition: all 300ms ease;
 }
+
+
 
 .imagen-principal {
     width: 100%;
@@ -344,7 +351,7 @@ column-gap: 10px;
 }
 
 .paisaje__texto {
-    background-color: rgb(37, 95, 209);
+    background-image: linear-gradient(to bottom, blue, rgb(108, 216, 243));
     color: bisque;
     text-align: justify;
     padding: 12px;
@@ -363,7 +370,7 @@ column-gap: 10px;
 }
 
 .animales__texto {
-    background-color: rgb(37, 95, 209);
+    background-image: linear-gradient(to bottom, blue, rgb(108, 216, 243));
     color: bisque;
     text-align: justify;
     padding: 12px;
@@ -381,7 +388,7 @@ column-gap: 10px;
     
 .plantas__texto {
     display: inline-block;
-    background-color: rgb(37, 95, 209);
+    background-image: linear-gradient(to bottom, blue, rgb(108, 216, 243));
     color: bisque;
     text-align: justify;
     padding: 12px;
