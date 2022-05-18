@@ -315,10 +315,10 @@ column-gap: 10px;
 .gastronomia__platillos {
     display: flex table-column;
     margin: 20px 10px 10px 10px;
+    width: 28rem;
 }
 
 .platillos__imagen {
-    width: 450px;
     border-radius: 5px;
 
 }
@@ -328,7 +328,6 @@ column-gap: 10px;
     color: bisque;
     text-align: justify;
     padding: 12px;
-    width: 425px;
     border-radius: 5px;
 }
 
