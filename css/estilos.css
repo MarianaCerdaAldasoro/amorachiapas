@@ -1,14 +1,24 @@
+/* selectores globales */
+
 iframe {
     width: 100%;
     height: 24rem;
 }
 
-.index-layout {
-    display: grid;
-    grid-template-areas: 
-    "header header header"
-    "main main main"
-    "footer footer footer";
+h1 {
+    margin: .625rem;
+    height: 6.875rem;
+    color: antiquewhite;
+    font-size: 4.375rem;
+    font-style: oblique;
+    text-align: center;
+    text-shadow: .313rem .313rem black;
+    background-image: url(../recursos/imagen1.jfif);
+    background-repeat: repeat;
+    width: 100%;
+    right: 0;
+    top: 1.875rem;
+    padding-top: 1.875rem;
 }
 
 body {
@@ -21,18 +31,18 @@ a {
     color: blueviolet;
 }
 
-.header {
+footer {
+    color: azure;
+    text-align: center;
+}
+
+
+header {
     display: flex;
     grid-area: header;
 }
 
-.index-main {
-    grid-area: main;
-}
-
-.index-footer {
-    grid-area: footer;
-}
+/**************************** clases compartidas ****************************/
 
 .header__navegacion {
     display: flex;
@@ -47,22 +57,6 @@ a {
 .header__navegacion--imagen-texto {
     display: flex;
     width: 100%;
-}
-
-h1 {
-    margin: .625rem;
-    height: 6.875rem;
-    color: antiquewhite; 
-    font-size: 4.375rem;
-    font-style: oblique;
-    text-align: center;
-    text-shadow: .313rem .313rem black;
-    background-image: url(../recursos/imagen1.jfif);
-    background-repeat: repeat;
-    width: 100%;
-    right: 0;
-    top: 1.875rem;
-    padding-top: 1.875rem;
 }
 
 .header__logo {
@@ -84,7 +78,39 @@ h1 {
     transition: all 300ms ease;
 }
 
+.chiapas__subtitulo {
+    text-align: center;
+    text-shadow: 2px 2px black;
+}
 
+.redes__sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes__imagen {
+    width: 3rem;
+    padding: .625rem;
+}
+
+/**************************** seccion index *****************************/
+
+.index-layout {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+.index-main {
+    grid-area: main;
+}
+
+.index-footer {
+    grid-area: footer;
+}
 
 .imagen-principal {
     width: 100%;
@@ -121,10 +147,7 @@ h1 {
     color: azure;
 }
 
-footer {
-    color: azure;
-    text-align: center;
-}
+/**************************** seccion cultura ****************************/
 
 .cultura {
     display: flex;
@@ -151,9 +174,13 @@ footer {
     margin: 20px;
 }
 
-.chiapas__subtitulo {
-    text-align: center;
-    text-shadow: 2px 2px black;
+.cultura__subtitulos {
+    font-size: 70px;
+}
+
+.card__wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 .tradiciones__imagen {
@@ -163,13 +190,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     color: crimson;
-    font-size: 70px;
     font-style: italic;
     text-decoration-line: inherit;
     text-shadow: 5px 5px black;
-    width: 90%;
     margin: 0;
     padding-top: 330px;
+    width: 75%;
 }
 
 .tradiciones__texto {
@@ -177,12 +203,13 @@ footer {
     padding: 10px;
     background-color: crimson;
     color: blanchedalmond;
-    width: 30%;
+    width: 20%;
+    justify-content: space-evenly;
 }
 
 .tradiciones__extra{
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .tradiciones__semana {
@@ -218,6 +245,7 @@ justify-content: center;
     justify-content: center;
     margin: 10px;
 }
+
 .artesanias__imagen {
     text-align:center;
     top: 40px;
@@ -225,7 +253,6 @@ justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
     color: blue;
-    font-size: 70px;
     width: 100%;
     font-style: italic;
     text-decoration-line: inherit;
@@ -280,6 +307,8 @@ justify-content: center;
     height: 100%;
 }
 
+/**************************** seccion gastronomia ****************************/
+
 .gastronomia {
     display: flex;
     align-items: center;
@@ -300,16 +329,16 @@ justify-content: center;
     height: 100%;
 }
 .gastronomia__wrapper {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .gastronomia__comidas {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-column-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
 }
 
 .gastronomia__platillos {
@@ -331,18 +360,20 @@ column-gap: 10px;
     border-radius: 5px;
 }
 
+/**************************** seccion naturaleza ****************************/
+
 .naturaleza {
-    display: grid; 
+    display: grid;
     grid-template-columns:  2fr 1fr 2fr;
     column-gap: 20px;
     margin: 2rem;
-    
+
 }
 
 .naturaleza__paisaje {
     display: flex;
     align-items:flex-start;
-    }
+}
 
 .paisaje__imagen {
     width: 100%;
@@ -361,7 +392,7 @@ column-gap: 10px;
     display: flex;
     align-items:flex-start;
     justify-content: center;
-    }
+}
 
 .animales__imagen {
     border-radius: 5px;
@@ -383,8 +414,8 @@ column-gap: 10px;
 
 .plantas__imagen {
     border-radius: 10px;
-}  
-    
+}
+
 .plantas__texto {
     display: inline-block;
     background-image: linear-gradient(to bottom, blue, rgb(108, 216, 243));
@@ -393,6 +424,9 @@ column-gap: 10px;
     padding: 12px;
     border-radius: 10px;
 }
+
+/**************************** seccion contacto ****************************/
+
 .contacto {
     display: flex;
     align-items:center;
@@ -420,23 +454,22 @@ column-gap: 10px;
     border-radius: 10px;
 }
 
-.redes__sociales {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/**************************** seccion media query ****************************/
 
-.redes__imagen {
-    width: 3rem;
-    padding: .625rem;
-}
-
-@media (min-width:320px) and (max-width: 540px) 
+@media (min-width:320px) and (max-width: 540px)
 {
+
+    /**************************** selectores globales para tableta ****************************/
 
     body {
         margin: 1rem;
     }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /**************************** clases compartidas tableta ****************************/
 
     .header {
         flex-direction: row;
@@ -457,14 +490,13 @@ column-gap: 10px;
         display: none;
     }
 
-    h1 {
-        font-size: 3rem;
-    }
-
+    /**************************** seccion index para tableta ****************************/
 
     .contenido {
         flex-direction:column-reverse;
     }
+
+    /**************************** seccion cultura para tableta ****************************/
 
     .cultura {
         flex-direction: column;
@@ -533,8 +565,10 @@ column-gap: 10px;
         width: auto;
     }
 
+    /**************************** seccion gastronomia para tableta ****************************/
+
     .gastronomia {
-        flex-direction:column;  
+        flex-direction:column;
     }
 
     .gastronomia__imagen {
@@ -546,6 +580,8 @@ column-gap: 10px;
         flex-direction: column;
     }
 
+    /**************************** seccion naturaleza para tableta ****************************/
+
     .naturaleza {
         display: flex;
         flex-direction: column;
@@ -556,6 +592,8 @@ column-gap: 10px;
         flex-direction: column;
     }
 
+    /**************************** seccion contacto para tableta ****************************/
+
     .contacto {
         flex-direction: column;
     }
@@ -564,15 +602,21 @@ column-gap: 10px;
 
 
 
-@media (min-width:541px) and (max-width: 1000px) 
+@media (min-width:541px) and (max-width: 1000px)
 {
+    /**************************** clases com0partidas para celular ****************************/
+
     h1 {
         font-size: 3rem;
     }
 
+    /**************************** seccion index para celular ****************************/
+
     .contenido {
         flex-direction:column-reverse;
     }
+
+    /**************************** seccion cultura para celular ****************************/
 
     .cultura {
         flex-direction: column;
@@ -581,7 +625,7 @@ column-gap: 10px;
     .cultura__imagen {
         max-width: 100%;
     }
-    
+
     .tradiciones {
         flex-direction: column;
     }
@@ -590,7 +634,7 @@ column-gap: 10px;
         width: 100%;
         margin: 0;
     }
-    
+
     .tradiciones__imagen {
         display:flex;
         width: 100%;
@@ -640,8 +684,10 @@ column-gap: 10px;
         max-width: 100%;
     }
 
+    /**************************** seccion gastronomia para celular ****************************/
+
     .gastronomia {
-        flex-direction:column;  
+        flex-direction:column;
     }
 
     .gastronomia__imagen {
@@ -653,6 +699,8 @@ column-gap: 10px;
         flex-direction: column;
     }
 
+    /**************************** seccion naturaleza para celular ****************************/
+
     .naturaleza {
         display: flex;
         flex-direction: column;
@@ -662,8 +710,4 @@ column-gap: 10px;
         display: flex;
         flex-direction: column;
     }
-
-
-
-
 }
