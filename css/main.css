@@ -35,7 +35,7 @@ header {
   grid-area: header; }
 
 /**************************** clases compartidas ****************************/
-.header__navegacion {
+header .navegacion {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
@@ -43,28 +43,20 @@ header {
   background-color: black;
   margin: 1.25rem;
   width: 100%; }
-
-.header__navegacion--imagen-texto {
-  display: flex;
-  width: 100%; }
-
-.header__logo {
-  width: 11.25rem; }
-
-.header__lista {
-  list-style-type: none;
-  display: flex; }
-
-.header__item:hover {
-  transform: scale(1.25); }
-
-.header__item:visited {
-  color: blueviolet; }
-
-.header__item {
-  margin: 10px;
-  padding: 5px;
-  transition: all 300ms ease; }
+  header .navegacion__imagen-texto {
+    display: flex;
+    width: 100%; }
+  header .navegacion__logo {
+    width: 11.25rem; }
+  header .navegacion__lista {
+    list-style-type: none;
+    display: flex; }
+  header .navegacion__item {
+    margin: 10px;
+    padding: 5px;
+    transition: all 300ms ease; }
+    header .navegacion__item:hover {
+      transform: scale(1.25); }
 
 .chiapas__subtitulo {
   text-align: center;
@@ -264,42 +256,35 @@ header {
   align-items: center;
   justify-content: center;
   margin: 10px; }
-
-.gastronomia__imagen {
-  max-width: 60%; }
-
-.gastronomia__texto {
-  background-color: #f01920;
-  color: bisque;
-  text-align: justify;
-  padding: 12px;
-  height: 100%; }
-
-.gastronomia__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.gastronomia__comidas {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10px; }
-
-.gastronomia__platillos {
-  display: flex table-column;
-  margin: 20px 10px 10px 10px;
-  width: 28rem; }
-
-.platillos__imagen {
-  border-radius: 5px; }
-
-.platillos__texto {
-  background-color: #f01920;
-  color: bisque;
-  text-align: justify;
-  padding: 12px;
-  border-radius: 5px; }
+  .gastronomia__imagen {
+    max-width: 60%; }
+  .gastronomia__texto {
+    background-color: #f01920;
+    color: bisque;
+    text-align: justify;
+    padding: 12px;
+    height: 100%; }
+  .gastronomia__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .gastronomia__comidas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px; }
+  .gastronomia__platillos {
+    display: flex table-column;
+    margin: 20px 10px 10px 10px;
+    width: 28rem; }
+    .gastronomia__platillos .platillos__imagen {
+      border-radius: 5px; }
+    .gastronomia__platillos .platillos__texto {
+      background-color: #f01920;
+      color: bisque;
+      text-align: justify;
+      padding: 12px;
+      border-radius: 5px; }
 
 /**************************** seccion naturaleza ****************************/
 .naturaleza {
@@ -359,24 +344,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around; }
-
-.contacto__mapa {
-  margin: 20px; }
-
-.contacto__contenido {
-  flex-direction: row;
-  margin: 20px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px; }
-
-.contacto__informacion {
-  background-color: blueviolet;
-  padding: 10px;
-  color: azure;
-  text-align: center;
-  margin: 10px;
-  border-radius: 10px; }
+  .contacto__mapa {
+    margin: 20px; }
+  .contacto__contenido {
+    flex-direction: row;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; }
+  .contacto__informacion {
+    background-color: blueviolet;
+    padding: 10px;
+    color: azure;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px; }
 
 /**************************** seccion media query ****************************/
 @media (min-width: 320px) and (max-width: 540px) {
