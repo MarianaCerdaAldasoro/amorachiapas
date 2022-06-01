@@ -1,3 +1,26 @@
+@mixin tradiciones-texto {
+  text-align: justify;
+  padding: 10px;
+  background-color: crimson;
+  color: blanchedalmond;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+%header-props {
+  display: flex;
+  grid-area: header;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$font-sizes: ("mediana": 2rem , "grande":70px);
+
+
 /* selectores globales */
 
 $min-mobile: 320px;
@@ -41,12 +64,6 @@ a {
 footer {
   color: azure;
   text-align: center;
-}
-
-
-%header-props {
-  display: flex;
-  grid-area: header;
 }
 
 /**************************** clases compartidas ****************************/
@@ -94,9 +111,7 @@ header{
 }
 
 .redes__sociales {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 }
 
 .redes__imagen {
@@ -127,9 +142,7 @@ header{
 }
 
 .contenido {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
 }
 
 .contenido__video{
@@ -160,9 +173,7 @@ header{
 /**************************** seccion cultura ****************************/
 
 .cultura {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   margin: 10px;
 }
 
@@ -185,7 +196,7 @@ header{
 }
 
 .cultura__subtitulos {
-  font-size: 70px;
+  @map.get($font-sizes,"grande");
 }
 
 .card__wrapper {
@@ -209,12 +220,7 @@ header{
 }
 
 .tradiciones__texto {
-  text-align: justify;
-  padding: 10px;
-  background-color: crimson;
-  color: blanchedalmond;
-  width: 20%;
-  justify-content: space-evenly;
+  @include tradiciones-texto;
 }
 
 .tradiciones__extra{
@@ -223,30 +229,15 @@ header{
 }
 
 .tradiciones__semana {
-  text-align: justify;
-  padding: 10px;
-  background-color: crimson;
-  color: blanchedalmond;
-  margin: 10px;
-  border-radius: 5px;
+  @include tradiciones-texto;
 }
 
 .tradiciones__virgen {
-  text-align: justify;
-  padding: 10px;
-  background-color: crimson;
-  color: blanchedalmond;
-  margin: 10px;
-  border-radius: 5px;
+  @include tradiciones-texto;
 }
 
 .tradiciones__sancristobal {
-  text-align: justify;
-  padding: 10px;
-  background-color: crimson;
-  color: blanchedalmond;
-  margin: 10px;
-  border-radius: 5px;
+  @include tradiciones-texto;
 }
 
 .artesanias {
@@ -292,7 +283,7 @@ header{
   background-image: url(../recursos/musica_chiapas.webp);
   background-repeat: no-repeat;
   color: rgb(80, 163, 20);
-  font-size: 70px;
+  @map.get($font-sizes,"grande");
   font-style: italic;
   text-shadow: 5px 5px black;
   width: 100%;
@@ -320,9 +311,7 @@ header{
 /**************************** seccion gastronomia ****************************/
 
 .gastronomia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   margin: 10px;
 
   &__imagen {
@@ -338,10 +327,8 @@ header{
   }
 
   &__wrapper {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   &__comidas {
@@ -525,14 +512,13 @@ header{
   }
 
   .tradiciones__imagen {
-      display:flex;
+      @extend %flex-center;
       width: 100%;
-      font-size: 2rem;
+      @map.get($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 10rem;
-      align-items: center;
-      justify-content: center;
+
   }
 
   .tradiciones__extra {
@@ -544,14 +530,12 @@ header{
   }
 
   .artesanias__imagen{
-      display:flex;
+      @extend %flex-center;
       width: 100%;
-      font-size: 2rem;
+      @map.get($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 10rem;
-      align-items: center;
-      justify-content: center;
   }
 
   .musica {
@@ -559,15 +543,14 @@ header{
   }
 
   .musica__imagen {
-      display:flex;
+      @extend %flex-center;
       width: 100%;
-      font-size: 2rem;
+      @map.get($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 15rem;
       background-position: center;
-      align-items: center;
-      justify-content: center;
+
   }
 
   .musica__contenido {
@@ -645,12 +628,10 @@ header{
   }
 
   .tradiciones__imagen {
-      display:flex;
+      @extend %flex-center;
       width: 100%;
       font-size: 4rem;
       top: 50%;
-      align-items: center;
-      justify-content: center;
   }
 
   .artesanias {
@@ -658,14 +639,12 @@ header{
   }
 
   .artesanias__imagen{
-      display:flex;
+      @extend %flex-center;
       width: 100%;
       font-size: 4rem;
       top: 50%;
       padding-top: 0;
       height: 10rem;
-      align-items: center;
-      justify-content: center;
   }
 
   .musica {
@@ -673,15 +652,13 @@ header{
   }
 
   .musica__imagen {
-      display:flex;
+      @extend %flex-center;
       width: auto;
       background-position: bottom;
       font-size: 4rem;
       top: 50%;
       padding-top: 0;
       height: 100%;
-      align-items: center;
-      justify-content: center;
   }
 
   .musica__contenido {
