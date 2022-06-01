@@ -196,7 +196,7 @@ header{
 }
 
 .cultura__subtitulos {
-  @map.get($font-sizes,"grande");
+  font-size: map($font-sizes,"grande");
 }
 
 .card__wrapper {
@@ -283,7 +283,7 @@ header{
   background-image: url(../recursos/musica_chiapas.webp);
   background-repeat: no-repeat;
   color: rgb(80, 163, 20);
-  @map.get($font-sizes,"grande");
+  font-size: map($font-sizes,"grande");
   font-style: italic;
   text-shadow: 5px 5px black;
   width: 100%;
@@ -512,9 +512,8 @@ header{
   }
 
   .tradiciones__imagen {
-      @extend %flex-center;
       width: 100%;
-      @map.get($font-sizes,"mediana");
+      font-size: map($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 10rem;
@@ -530,9 +529,11 @@ header{
   }
 
   .artesanias__imagen{
-      @extend %flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      @map.get($font-sizes,"mediana");
+      font-size: map($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 10rem;
@@ -543,9 +544,11 @@ header{
   }
 
   .musica__imagen {
-      @extend %flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      @map.get($font-sizes,"mediana");
+      font-size: 2rem;
       top: 50%;
       padding-top: 0;
       height: 15rem;
@@ -628,7 +631,9 @@ header{
   }
 
   .tradiciones__imagen {
-      @extend %flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       font-size: 4rem;
       top: 50%;
@@ -639,7 +644,9 @@ header{
   }
 
   .artesanias__imagen{
-      @extend %flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       font-size: 4rem;
       top: 50%;
@@ -652,7 +659,6 @@ header{
   }
 
   .musica__imagen {
-      @extend %flex-center;
       width: auto;
       background-position: bottom;
       font-size: 4rem;

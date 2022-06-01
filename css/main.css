@@ -1,3 +1,12 @@
+header {
+  display: flex;
+  grid-area: header; }
+
+.redes__sociales, .contenido, .cultura, .gastronomia, .gastronomia__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /* selectores globales */
 iframe {
   width: 100%;
@@ -30,10 +39,6 @@ footer {
   color: azure;
   text-align: center; }
 
-header {
-  display: flex;
-  grid-area: header; }
-
 /**************************** clases compartidas ****************************/
 header .navegacion {
   display: flex;
@@ -62,11 +67,6 @@ header .navegacion {
   text-align: center;
   text-shadow: 2px 2px black; }
 
-.redes__sociales {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
 .redes__imagen {
   width: 3rem;
   padding: .625rem; }
@@ -84,11 +84,6 @@ header .navegacion {
 
 .imagen-principal {
   width: 100%; }
-
-.contenido {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
 
 .contenido__video {
   max-width: 100%;
@@ -113,9 +108,6 @@ header .navegacion {
 
 /**************************** seccion cultura ****************************/
 .cultura {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 10px; }
 
 .cultura__imagen {
@@ -133,7 +125,7 @@ header .navegacion {
   margin: 20px; }
 
 .cultura__subtitulos {
-  font-size: 70px; }
+  font-size: map(("mediana": 2rem, "grande": 70px), "grande"); }
 
 .card__wrapper {
   display: flex;
@@ -158,8 +150,8 @@ header .navegacion {
   padding: 10px;
   background-color: crimson;
   color: blanchedalmond;
-  width: 20%;
-  justify-content: space-evenly; }
+  margin: 10px;
+  border-radius: 5px; }
 
 .tradiciones__extra {
   display: flex;
@@ -228,7 +220,7 @@ header .navegacion {
   background-image: url(../recursos/musica_chiapas.webp);
   background-repeat: no-repeat;
   color: #50a314;
-  font-size: 70px;
+  font-size: map(("mediana": 2rem, "grande": 70px), "grande");
   font-style: italic;
   text-shadow: 5px 5px black;
   width: 100%;
@@ -252,9 +244,6 @@ header .navegacion {
 
 /**************************** seccion gastronomia ****************************/
 .gastronomia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 10px; }
   .gastronomia__imagen {
     max-width: 60%; }
@@ -265,10 +254,7 @@ header .navegacion {
     padding: 12px;
     height: 100%; }
   .gastronomia__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
+    flex-direction: column; }
   .gastronomia__comidas {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -392,39 +378,36 @@ header .navegacion {
     width: 100%;
     margin: 0; }
   .tradiciones__imagen {
-    display: flex;
     width: 100%;
-    font-size: 2rem;
+    font-size: map(("mediana": 2rem, "grande": 70px), "mediana");
     top: 50%;
     padding-top: 0;
-    height: 10rem;
-    align-items: center;
-    justify-content: center; }
+    height: 10rem; }
   .tradiciones__extra {
     flex-direction: column; }
   .artesanias {
     flex-direction: column; }
   .artesanias__imagen {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    font-size: 2rem;
+    font-size: map(("mediana": 2rem, "grande": 70px), "mediana");
     top: 50%;
     padding-top: 0;
-    height: 10rem;
-    align-items: center;
-    justify-content: center; }
+    height: 10rem; }
   .musica {
     flex-direction: column; }
   .musica__imagen {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 2rem;
     top: 50%;
     padding-top: 0;
     height: 15rem;
-    background-position: center;
-    align-items: center;
-    justify-content: center; }
+    background-position: center; }
   .musica__contenido {
     width: auto; }
   /**************************** seccion gastronomia para tableta ****************************/
@@ -465,34 +448,31 @@ header .navegacion {
     margin: 0; }
   .tradiciones__imagen {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 4rem;
-    top: 50%;
-    align-items: center;
-    justify-content: center; }
+    top: 50%; }
   .artesanias {
     flex-direction: column; }
   .artesanias__imagen {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: 4rem;
     top: 50%;
     padding-top: 0;
-    height: 10rem;
-    align-items: center;
-    justify-content: center; }
+    height: 10rem; }
   .musica {
     flex-direction: column; }
   .musica__imagen {
-    display: flex;
     width: auto;
     background-position: bottom;
     font-size: 4rem;
     top: 50%;
     padding-top: 0;
-    height: 100%;
-    align-items: center;
-    justify-content: center; }
+    height: 100%; }
   .musica__contenido {
     width: 92vw;
     height: 100%; }
