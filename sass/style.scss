@@ -196,7 +196,7 @@ header{
 }
 
 .cultura__subtitulos {
-  font-size: map($font-sizes,"grande");
+  font-size: map-get($font-sizes,"grande");
 }
 
 .card__wrapper {
@@ -283,7 +283,7 @@ header{
   background-image: url(../recursos/musica_chiapas.webp);
   background-repeat: no-repeat;
   color: rgb(80, 163, 20);
-  font-size: map($font-sizes,"grande");
+  font-size: map-get($font-sizes,"grande");
   font-style: italic;
   text-shadow: 5px 5px black;
   width: 100%;
@@ -428,7 +428,7 @@ header{
   align-items:center;
   justify-content:space-around;
 
-  &__mapa {
+  &__map-geta {
     margin: 20px;
   }
 
@@ -452,39 +452,42 @@ header{
 
 /**************************** seccion media query ****************************/
 
-@media (min-width: $min-mobile) and (max-width: $max-mobile)
+@media (min-width: $min-tablet) and (max-width: $max-tablet)
 {
 
   /**************************** selectores globales para tableta ****************************/
 
-  body {
-      margin: 1rem;
-  }
-
   h1 {
-      font-size: 3rem;
+    font-size: 2.5rem;
+}
+
+section {
+  max-width: 80%;
+}
+
+header {
+  .navegacion {
+    align-items: center;
   }
+}
 
-  /**************************** clases compartidas tableta ****************************/
+.header {
+  flex-direction: row;
+  width: auto;
+}
 
-  .header {
-      flex-direction: row;
-      width: auto;
-  }
+.header__navegacion {
+  align-items: center;
+}
 
-  .header__navegacion {
-      align-items: center;
-  }
+.navegacion__lista {
+  flex-direction: column;
+  align-items: center;
+}
 
-  .header__lista {
-      flex-direction: column;
-      align-items: center;
-  }
-
-
-  .header__logo {
-      display: none;
-  }
+.navegacion__logo {
+  display: none;
+}
 
   /**************************** seccion index para tableta ****************************/
 
@@ -513,7 +516,7 @@ header{
 
   .tradiciones__imagen {
       width: 100%;
-      font-size: map($font-sizes,"mediana");
+      font-size: map-get($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 10rem;
@@ -533,7 +536,7 @@ header{
       justify-content: center;
       align-items: center;
       width: 100%;
-      font-size: map($font-sizes,"mediana");
+      font-size: map-get($font-sizes,"mediana");
       top: 50%;
       padding-top: 0;
       height: 10rem;
@@ -564,6 +567,10 @@ header{
 
   .gastronomia {
       flex-direction:column;
+  }
+
+  .gastronomia__texto {
+    width: 80%;
   }
 
   .gastronomia__imagen {
@@ -597,19 +604,55 @@ header{
 
 
 
-@media (min-width: $min-tablet) and (max-width: $max-tablet)
+@media (max-width: $max-mobile)
 {
-  /**************************** clases com0partidas para celular ****************************/
+  /**************************** clases compartidas para celular ****************************/
 
   h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
   }
+
+  section {
+    max-width: 80%;
+  }
+
+  header {
+    .navegacion {
+      align-items: center;
+    }
+  }
+
+  .header {
+    flex-direction: row;
+    width: auto;
+}
+
+.header__navegacion {
+    align-items: center;
+}
+
+.navegacion__lista {
+    flex-direction: column;
+    align-items: center;
+}
+
+.navegacion__logo {
+    display: none;
+}
 
   /**************************** seccion index para celular ****************************/
 
-  .contenido {
-      flex-direction:column-reverse;
+  .index-main {
+    flex-direction:column-reverse;
+    align-items: center;
+    justify-content: center;
+
+  .imagen-principal {
+    width: 120%;
   }
+
+
+
 
   /**************************** seccion cultura para celular ****************************/
 
@@ -630,12 +673,15 @@ header{
       margin: 0;
   }
 
+  .tradiciones__extra {
+    flex-direction: column;
+  }
+
   .tradiciones__imagen {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      font-size: 4rem;
       top: 50%;
   }
 
@@ -648,7 +694,7 @@ header{
       justify-content: center;
       align-items: center;
       width: 100%;
-      font-size: 4rem;
+      font-size: 2rem;
       top: 50%;
       padding-top: 0;
       height: 10rem;
@@ -680,6 +726,26 @@ header{
 
   .gastronomia {
       flex-direction:column;
+      }
+
+  .gastronomia__texto {
+    width: 100%;
+  }
+
+  .platillos__imagen {
+    width: 100%;
+    align-items: center;
+  }
+
+  .platillos__texto {
+    width: 100%;
+  }
+
+  .gastronomia__wrapper {
+  margin: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
   .gastronomia__imagen {
@@ -689,6 +755,14 @@ header{
   .gastronomia__comidas {
       display: flex;
       flex-direction: column;
+      margin: .04rem;
+      justify-content: center;
+      align-items: center;
+  }
+
+
+  .gastronomia__platillos {
+    max-width: 90%;
   }
 
   /**************************** seccion naturaleza para celular ****************************/
