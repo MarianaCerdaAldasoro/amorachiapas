@@ -125,7 +125,7 @@ header .navegacion {
   margin: 20px; }
 
 .cultura__subtitulos {
-  font-size: map(("mediana": 2rem, "grande": 70px), "grande"); }
+  font-size: 70px; }
 
 .card__wrapper {
   display: flex;
@@ -220,7 +220,7 @@ header .navegacion {
   background-image: url(../recursos/musica_chiapas.webp);
   background-repeat: no-repeat;
   color: #50a314;
-  font-size: map(("mediana": 2rem, "grande": 70px), "grande");
+  font-size: 70px;
   font-style: italic;
   text-shadow: 5px 5px black;
   width: 100%;
@@ -330,7 +330,7 @@ header .navegacion {
   display: flex;
   align-items: center;
   justify-content: space-around; }
-  .contacto__mapa {
+  .contacto__map-geta {
     margin: 20px; }
   .contacto__contenido {
     flex-direction: row;
@@ -347,22 +347,23 @@ header .navegacion {
     border-radius: 10px; }
 
 /**************************** seccion media query ****************************/
-@media (min-width: 320px) and (max-width: 540px) {
+@media (min-width: 541px) and (max-width: 1000px) {
   /**************************** selectores globales para tableta ****************************/
-  body {
-    margin: 1rem; }
   h1 {
-    font-size: 3rem; }
-  /**************************** clases compartidas tableta ****************************/
+    font-size: 2.5rem; }
+  section {
+    max-width: 80%; }
+  header .navegacion {
+    align-items: center; }
   .header {
     flex-direction: row;
     width: auto; }
   .header__navegacion {
     align-items: center; }
-  .header__lista {
+  .navegacion__lista {
     flex-direction: column;
     align-items: center; }
-  .header__logo {
+  .navegacion__logo {
     display: none; }
   /**************************** seccion index para tableta ****************************/
   .contenido {
@@ -379,7 +380,7 @@ header .navegacion {
     margin: 0; }
   .tradiciones__imagen {
     width: 100%;
-    font-size: map(("mediana": 2rem, "grande": 70px), "mediana");
+    font-size: 2rem;
     top: 50%;
     padding-top: 0;
     height: 10rem; }
@@ -392,7 +393,7 @@ header .navegacion {
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: map(("mediana": 2rem, "grande": 70px), "mediana");
+    font-size: 2rem;
     top: 50%;
     padding-top: 0;
     height: 10rem; }
@@ -413,6 +414,8 @@ header .navegacion {
   /**************************** seccion gastronomia para tableta ****************************/
   .gastronomia {
     flex-direction: column; }
+  .gastronomia__texto {
+    width: 80%; }
   .gastronomia__imagen {
     max-width: 100%; }
   .gastronomia__comidas {
@@ -429,67 +432,103 @@ header .navegacion {
   .contacto {
     flex-direction: column; } }
 
-@media (min-width: 541px) and (max-width: 1000px) {
-  /**************************** clases com0partidas para celular ****************************/
+@media (max-width: 540px) {
+  /**************************** clases compartidas para celular ****************************/
   h1 {
-    font-size: 3rem; }
+    font-size: 2.5rem; }
+  section {
+    max-width: 80%; }
+  header .navegacion {
+    align-items: center; }
+  .header {
+    flex-direction: row;
+    width: auto; }
+  .header__navegacion {
+    align-items: center; }
+  .navegacion__lista {
+    flex-direction: column;
+    align-items: center; }
+  .navegacion__logo {
+    display: none; }
   /**************************** seccion index para celular ****************************/
-  .contenido {
-    flex-direction: column-reverse; }
-  /**************************** seccion cultura para celular ****************************/
-  .cultura {
-    flex-direction: column; }
-  .cultura__imagen {
-    max-width: 100%; }
-  .tradiciones {
-    flex-direction: column; }
-  .tradiciones__texto {
-    width: 100%;
-    margin: 0; }
-  .tradiciones__imagen {
-    display: flex;
-    justify-content: center;
+  .index-main {
+    flex-direction: column-reverse;
     align-items: center;
-    width: 100%;
-    font-size: 4rem;
-    top: 50%; }
-  .artesanias {
-    flex-direction: column; }
-  .artesanias__imagen {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 4rem;
-    top: 50%;
-    padding-top: 0;
-    height: 10rem; }
-  .musica {
-    flex-direction: column; }
-  .musica__imagen {
-    width: auto;
-    background-position: bottom;
-    font-size: 4rem;
-    top: 50%;
-    padding-top: 0;
-    height: 100%; }
-  .musica__contenido {
-    width: 92vw;
-    height: 100%; }
-  .musica__video {
-    max-width: 100%; }
-  /**************************** seccion gastronomia para celular ****************************/
-  .gastronomia {
-    flex-direction: column; }
-  .gastronomia__imagen {
-    width: 100%; }
-  .gastronomia__comidas {
-    display: flex;
-    flex-direction: column; }
-  /**************************** seccion naturaleza para celular ****************************/
-  .naturaleza {
-    display: flex;
-    flex-direction: column; }
-  .naturaleza__plantas {
-    display: flex;
-    flex-direction: column; } }
+    /**************************** seccion cultura para celular ****************************/
+    /**************************** seccion gastronomia para celular ****************************/
+    /**************************** seccion naturaleza para celular ****************************/ }
+    .index-main .imagen-principal {
+      width: 120%; }
+    .index-main .cultura {
+      flex-direction: column; }
+    .index-main .cultura__imagen {
+      max-width: 100%; }
+    .index-main .tradiciones {
+      flex-direction: column; }
+    .index-main .tradiciones__texto {
+      width: 100%;
+      margin: 0; }
+    .index-main .tradiciones__extra {
+      flex-direction: column; }
+    .index-main .tradiciones__imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      top: 50%; }
+    .index-main .artesanias {
+      flex-direction: column; }
+    .index-main .artesanias__imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 2rem;
+      top: 50%;
+      padding-top: 0;
+      height: 10rem; }
+    .index-main .musica {
+      flex-direction: column; }
+    .index-main .musica__imagen {
+      width: auto;
+      background-position: bottom;
+      font-size: 4rem;
+      top: 50%;
+      padding-top: 0;
+      height: 100%; }
+    .index-main .musica__contenido {
+      width: 92vw;
+      height: 100%; }
+    .index-main .musica__video {
+      max-width: 100%; }
+    .index-main .gastronomia {
+      flex-direction: column; }
+    .index-main .gastronomia__texto {
+      width: 100%; }
+    .index-main .platillos__imagen {
+      width: 100%;
+      align-items: center; }
+    .index-main .platillos__texto {
+      width: 100%; }
+    .index-main .gastronomia__wrapper {
+      margin: .5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .index-main .gastronomia__imagen {
+      width: 100%; }
+    .index-main .gastronomia__comidas {
+      display: flex;
+      flex-direction: column;
+      margin: .04rem;
+      justify-content: center;
+      align-items: center; }
+    .index-main .gastronomia__platillos {
+      max-width: 90%; }
+    .index-main .naturaleza {
+      display: flex;
+      flex-direction: column; }
+    .index-main .naturaleza__plantas {
+      display: flex;
+      flex-direction: column; } }
