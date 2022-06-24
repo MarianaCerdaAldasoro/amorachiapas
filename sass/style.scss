@@ -23,11 +23,11 @@ $font-sizes: ("mediana": 2rem , "grande":70px);
 
 /* selectores globales */
 
-$min-mobile: 320px;
-$max-mobile: 540px;
-
-$min-tablet: 541px;
+$min-tablet: 1px;
 $max-tablet: 1000px;
+
+$min-mobile: 1px;
+$max-mobile: 1px;
 
 
 iframe {
@@ -160,7 +160,6 @@ header{
 
 .blog__tittle{
   text-align: center;
-  margin: 20px;
   color: rgb(217, 222, 220);
   background-color: blueviolet;
 }
@@ -339,8 +338,7 @@ header{
 
   &__platillos {
     display: flex table-column;
-    margin: 20px 10px 10px 10px;
-    width: 28rem;
+    margin: 20px 10px 10px 10px;}
 
     .platillos__imagen {
       border-radius: 5px;
@@ -354,7 +352,7 @@ header{
       border-radius: 5px;
     }
   }
-}
+
 
 /**************************** seccion naturaleza ****************************/
 
@@ -452,159 +450,7 @@ header{
 
 /**************************** seccion media query ****************************/
 
-@media (min-width: $min-tablet) and (max-width: $max-tablet)
-{
-
-  /**************************** selectores globales para tableta ****************************/
-
-  h1 {
-    font-size: 2.5rem;
-}
-
-section {
-  max-width: 80%;
-}
-
-header {
-  .navegacion {
-    align-items: center;
-  }
-}
-
-.header {
-  flex-direction: row;
-  width: auto;
-}
-
-.header__navegacion {
-  align-items: center;
-}
-
-.navegacion__lista {
-  flex-direction: column;
-  align-items: center;
-}
-
-.navegacion__logo {
-  display: none;
-}
-
-  /**************************** seccion index para tableta ****************************/
-
-  .contenido {
-      flex-direction:column-reverse;
-  }
-
-  /**************************** seccion cultura para tableta ****************************/
-
-  .cultura {
-      flex-direction: column;
-  }
-
-  .cultura__imagen {
-      max-width: 100%;
-  }
-
-  .tradiciones {
-      flex-direction: column;
-  }
-
-  .tradiciones__texto {
-      width: 100%;
-      margin: 0;
-  }
-
-  .tradiciones__imagen {
-      width: 100%;
-      font-size: map-get($font-sizes,"mediana");
-      top: 50%;
-      padding-top: 0;
-      height: 10rem;
-
-  }
-
-  .tradiciones__extra {
-      flex-direction: column;
-  }
-
-  .artesanias {
-      flex-direction: column;
-  }
-
-  .artesanias__imagen{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      font-size: map-get($font-sizes,"mediana");
-      top: 50%;
-      padding-top: 0;
-      height: 10rem;
-  }
-
-  .musica {
-      flex-direction:column;
-  }
-
-  .musica__imagen {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      font-size: 2rem;
-      top: 50%;
-      padding-top: 0;
-      height: 15rem;
-      background-position: center;
-
-  }
-
-  .musica__contenido {
-      width: auto;
-  }
-
-  /**************************** seccion gastronomia para tableta ****************************/
-
-  .gastronomia {
-      flex-direction:column;
-  }
-
-  .gastronomia__texto {
-    width: 80%;
-  }
-
-  .gastronomia__imagen {
-      max-width: 100%;
-  }
-
-  .gastronomia__comidas {
-      display: flex;
-      flex-direction: column;
-  }
-
-  /**************************** seccion naturaleza para tableta ****************************/
-
-  .naturaleza {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .naturaleza__plantas {
-      display: flex;
-      flex-direction: column;
-  }
-
-  /**************************** seccion contacto para tableta ****************************/
-
-  .contacto {
-      flex-direction: column;
-  }
-
-}
-
-
-
-@media (max-width: $max-mobile)
+@media (min-width: $min-mobile) and (max-width: $max-mobile)
 {
   /**************************** clases compartidas para celular ****************************/
 
@@ -651,7 +497,9 @@ header {
     width: 120%;
   }
 
-
+  .contenido__video {
+    width: 100%
+  }
 
 
   /**************************** seccion cultura para celular ****************************/
@@ -773,8 +621,165 @@ header {
   }
 
   .naturaleza__plantas
-    {display: flex;
+      {display: flex;
       flex-direction: column;
   }
 }
 }
+
+@media (min-width: $min-tablet) and (max-width: $max-tablet)
+{
+
+  /**************************** selectores globales para tableta ****************************/
+
+  h1 {
+    font-size: 2.5rem;
+}
+
+section {
+  max-width: 80%;
+}
+
+header {
+  .navegacion {
+    align-items: center;
+  }
+}
+
+.header {
+  flex-direction: row;
+  width: auto;
+}
+
+.header__navegacion {
+  align-items: center;
+}
+
+.navegacion__lista {
+  flex-direction: column;
+  align-items: center;
+}
+
+.navegacion__logo {
+  display: none;
+}
+
+  /**************************** seccion index para tableta ****************************/
+
+  .contenido {
+      flex-direction:column-reverse;
+  }
+
+  .contenido__video {
+    width: 100%
+  }
+
+  /**************************** seccion cultura para tableta ****************************/
+
+  .cultura {
+      flex-direction: column;
+  }
+
+  .cultura__imagen {
+      max-width: 100%;
+  }
+
+  .tradiciones {
+      flex-direction: column;
+  }
+
+  .tradiciones__texto {
+      width: 100%;
+      margin: 0;
+  }
+
+  .tradiciones__imagen {
+      width: 100%;
+      font-size: map-get($font-sizes,"mediana");
+      top: 50%;
+      padding-top: 0;
+      height: 10rem;
+
+  }
+
+  .tradiciones__extra {
+      flex-direction: column;
+  }
+
+  .artesanias {
+      flex-direction: column;
+  }
+
+  .artesanias__imagen{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: map-get($font-sizes,"mediana");
+      top: 50%;
+      padding-top: 0;
+      height: 10rem;
+  }
+
+  .musica {
+      flex-direction:column;
+  }
+
+  .musica__imagen {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 2rem;
+      top: 50%;
+      padding-top: 0;
+      height: 15rem;
+      background-position: center;
+
+  }
+
+  .musica__contenido {
+      width: auto;
+  }
+
+  /**************************** seccion gastronomia para tableta ****************************/
+
+  .gastronomia {
+      flex-direction:column;
+  }
+
+  .gastronomia__texto {
+    width: 80%;
+  }
+
+  .gastronomia__imagen {
+      max-width: 100%;
+  }
+
+  .gastronomia__comidas {
+      display: flex;
+      flex-direction: column;
+  }
+
+  /**************************** seccion naturaleza para tableta ****************************/
+
+  .naturaleza {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .naturaleza__plantas {
+      display: flex;
+      flex-direction: column;
+  }
+
+  /**************************** seccion contacto para tableta ****************************/
+
+  .contacto {
+      flex-direction: column;
+  }
+
+}
+
+
+
